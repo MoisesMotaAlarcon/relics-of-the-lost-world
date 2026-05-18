@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/web/index.html" },
+    { "source": "/index.html", "destination": "/web/index.html" },
+    { "source": "/options.html", "destination": "/web/options.html" },
+    { "source": "/controls.html", "destination": "/web/controls.html" },
+    { "source": "/sound.html", "destination": "/web/sound.html" },
+    { "source": "/worlds.html", "destination": "/web/worlds.html" },
+    { "source": "/game.html", "destination": "/web/game.html" },
+    { "source": "/coming-soon.html", "destination": "/web/coming-soon.html" },
+
+    { "source": "/styles/:path*", "destination": "/web/styles/:path*" },
+    { "source": "/libs/:path*", "destination": "/web/libs/:path*" },
+    { "source": "/scripts/:path*", "destination": "/web/scripts/:path*" },
+
+    { "source": "/game/:path*", "destination": "/game/:path*" },
+    { "source": "/assets/:path*", "destination": "/assets/:path*" }
+  ]
+}

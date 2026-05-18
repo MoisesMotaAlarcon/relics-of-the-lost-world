@@ -1,0 +1,879 @@
+/* ============================= */
+/* RESET Y TIPOGRAFÍA */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff3cc;
+}
+
+/* ============================= */
+/* PANTALLA DE INICIO */
+/* ============================= */
+.game-menu {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/backgrounds/index_background.png") center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 24, 8, 0.45);
+}
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffecaf;
+  padding: 20px;
+  max-width: 1200px;
+  transform: translateY(-80px);
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+.content h1.title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  color: #ffecaf;
+  transform: skew(-10deg);
+  text-shadow:
+    3px 3px 0 #5a3e12,
+    6px 6px 14px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================= */
+/* SUBTÍTULO */
+/* ============================= */
+.content p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem;
+  max-width: 1200px;
+  margin: 0 auto 36px auto;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #fff3cc;
+  text-shadow:
+    1px 1px 0 #5a3e12,
+    2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/* MENÚ */
+/* ============================= */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+.menu-btn {
+  width: 350px;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transform: skew(-5deg);
+  color: #744013;
+  background: linear-gradient(180deg, #e6c76a, #b9892d);
+  box-shadow:
+    0 5px 0 #7a5a1a,
+    0 10px 20px rgba(0, 0, 0, 0.35);
+  text-shadow: 1px 1px 0 rgba(255, 248, 220, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-3px) scale(1.04) skew(-5deg);
+  background: linear-gradient(180deg, #f2d784, #cb9a36);
+}
+
+.menu-btn:active {
+  transform: translateY(3px) skew(-5deg);
+  box-shadow:
+    0 2px 0 #7a5a1a,
+    0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+    transform: translateY(-40px);
+  }
+
+  .content h1.title {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    transform: skew(-3deg);
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    max-width: 95%;
+    margin-bottom: 28px;
+  }
+
+  .menu-btn {
+    width: 260px;
+    font-size: 1.2rem;
+    padding: 16px 20px;
+  }
+}
+
+/* ============================= */
+/* OPTIONS PAGE */
+/* ============================= */
+.options-page {
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(20, 20, 60, 0.5), rgba(20, 20, 60, 0.5)),
+    url("../../assets/backgrounds/index_background.png") center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 60, 0.4);
+}
+
+/* CONTENIDO */
+.options-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* TÍTULO */
+.options-title {
+  font-size: 4.5rem;
+  margin-bottom: 40px;
+  color: #fff3cc;
+  transform: skew(-4deg);
+  text-shadow:
+    3px 3px 0 #1a1a3d,
+    6px 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================= */
+/* CONTROLS PAGE */
+/* ============================= */
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.control-row:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.control-label,
+.control-value {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #fff3cc;
+  text-shadow:
+    2px 2px 0 #1a1a3d,
+    4px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.control-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+/* Flechas: primeras 4 filas */
+.control-row:nth-child(-n + 4) .control-value {
+  font-family: 'Noto Sans Symbols 2', 'Segoe UI Symbol', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-text-stroke: 1px #fff3cc;
+  text-shadow:
+    1px 1px 0 #fff3cc,
+    2px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.controls-menu {
+  margin-top: 25px;
+}
+
+/* ============================= */
+/* SOUND PAGE */
+/* ============================= */
+.sound-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin: 50px 0 40px 0;
+}
+
+.small-btn {
+  width: 240px;
+}
+
+.sound-menu {
+  margin-top: 15px;
+}
+
+.selected-btn {
+  background: linear-gradient(180deg, #f2d784, #cb9a36);
+  box-shadow:
+    0 5px 0 #7a5a1a,
+    0 10px 22px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/* RESPONSIVE CONTROLS / SOUND */
+/* ============================= */
+@media (max-width: 768px) {
+  .control-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .control-label,
+  .control-value {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .control-row:nth-child(-n + 4) .control-value {
+    font-size: 2.2rem;
+  }
+
+  .sound-buttons {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .small-btn {
+    width: 260px;
+  }
+}
+
+/* ============================= */
+/* WORLDS PAGE */
+/* ============================= */
+.worlds-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(40, 24, 8, 0.45), rgba(40, 24, 8, 0.45)),
+    url("../../assets/backgrounds/index_background.png") center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff3cc;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.worlds-screen {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+
+.worlds-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  color: #ffecaf;
+  transform: skew(-4deg);
+  text-shadow:
+    3px 3px 0 #5a3e12,
+    6px 6px 14px rgba(0, 0, 0, 0.55);
+}
+
+.worlds-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 50px;
+  justify-items: center;
+  align-items: start;
+}
+
+.world-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.world-card {
+  position: relative;
+  width: 400px;
+  height: 230px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 4px solid #c79a36;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow:
+    0 6px 0 #7a5a1a,
+    0 12px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ============================= */
+/* IMÁGENES POR MUNDO */
+/* ============================= */
+.world-card[data-world="egipto"] {
+  background: url("../../assets/backgrounds/egipto.png") center / cover no-repeat;
+}
+
+.world-card[data-world="roma"] {
+  background: url("../../assets/backgrounds/roma.png") center / cover no-repeat;
+}
+
+.world-card[data-world="selva"] {
+  background: url("../../assets/backgrounds/selva.png") center / cover no-repeat;
+}
+
+.world-card[data-world="catacumbas"] {
+  background: url("../../assets/backgrounds/catacumbas.png") center / cover no-repeat;
+}
+
+.world-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(47, 30, 15, 0.18);
+  transition: background 0.25s ease;
+}
+
+.world-label {
+  margin-top: 16px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffecaf;
+  text-shadow:
+    2px 2px 0 #5a3e12,
+    4px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.world-item:hover .world-card {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 8px 0 #7a5a1a,
+    0 16px 28px rgba(0, 0, 0, 0.42);
+}
+
+.world-item:hover .world-overlay {
+  background: rgba(47, 30, 15, 0.08);
+}
+
+.back-container {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================= */
+/* RESPONSIVE WORLDS */
+/* ============================= */
+@media (max-width: 900px) {
+  .worlds-screen {
+    transform: none;
+  }
+
+  .worlds-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .world-card {
+    width: 320px;
+    height: 190px;
+  }
+
+  .worlds-title {
+    font-size: 3.2rem;
+  }
+
+  .world-label {
+    font-size: 1.6rem;
+  }
+}
+
+/* ============================= */
+/* COMING SOON PAGE */
+/* ============================= */
+.coming-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff3cc;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.coming-page.world-roma {
+  background:
+    linear-gradient(rgba(40, 24, 8, 0.45), rgba(40, 24, 8, 0.45)),
+    url("../../assets/backgrounds/roma.png") center / cover no-repeat;
+}
+
+.coming-page.world-selva {
+  background:
+    linear-gradient(rgba(40, 24, 8, 0.45), rgba(40, 24, 8, 0.45)),
+    url("../../assets/backgrounds/selva.png") center / cover no-repeat;
+}
+
+.coming-page.world-catacumbas {
+  background:
+    linear-gradient(rgba(40, 24, 8, 0.45), rgba(40, 24, 8, 0.45)),
+    url("../../assets/backgrounds/catacumbas.png") center / cover no-repeat;
+}
+
+.coming-screen {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.coming-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.coming-content h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffecaf;
+  transform: skew(-4deg);
+  text-shadow:
+    3px 3px 0 #5a3e12,
+    6px 6px 14px rgba(0, 0, 0, 0.55);
+}
+
+.coming-content p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: #fff3cc;
+  text-shadow:
+    1px 1px 0 #5a3e12,
+    2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ============================= */
+/* GAME OVER / LEVEL COMPLETE */
+/* ============================= */
+.game-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 14, 8, 0.5);
+  z-index: 9998;
+}
+
+.game-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  max-width: 90vw;
+  padding: 30px 28px;
+  transform: translate(-50%, -50%);
+  border: 4px solid #c79a36;
+  border-radius: 22px;
+  background: rgba(250, 236, 197, 0.96);
+  box-shadow:
+    0 6px 0 #7a5a1a,
+    0 14px 28px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  z-index: 9999;
+  color: #5a3e12;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.game-modal-title {
+  margin-bottom: 18px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #744013;
+  transform: skew(-4deg);
+  text-shadow:
+    2px 2px 0 rgba(255, 248, 220, 0.35),
+    4px 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.game-modal-text {
+  margin-bottom: 26px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: #744013;
+  text-shadow: none;
+}
+
+.game-modal-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.game-modal-btn {
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transform: skew(-5deg);
+  color: #744013;
+  background: linear-gradient(180deg, #e6c76a, #b9892d);
+  box-shadow:
+    0 5px 0 #7a5a1a,
+    0 10px 20px rgba(0, 0, 0, 0.35);
+  text-shadow: 1px 1px 0 rgba(255, 248, 220, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-modal-btn:hover {
+  transform: translateY(-3px) scale(1.04) skew(-5deg);
+  background: linear-gradient(180deg, #f2d784, #cb9a36);
+}
+
+.game-modal-btn:active {
+  transform: translateY(3px) skew(-5deg);
+  box-shadow:
+    0 2px 0 #7a5a1a,
+    0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* TUTORIAL HINTS */
+/* ============================= */
+.game-hint {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 9997;
+  width: max-content;
+  max-width: min(700px, 90vw);
+  padding: 16px 26px;
+  transform: translateX(-50%);
+  border: 4px solid #c79a36;
+  border-radius: 22px;
+  background: rgba(250, 236, 197, 0.96);
+  box-shadow:
+    0 6px 0 #7a5a1a,
+    0 14px 28px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  color: #744013;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-shadow:
+    1px 1px 0 rgba(255, 248, 220, 0.35),
+    2px 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.game-hint-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .game-modal {
+    width: 90vw;
+    padding: 24px 20px;
+  }
+
+  .game-modal-title {
+    font-size: 2.3rem;
+  }
+
+  .game-modal-text {
+    font-size: 1.05rem;
+  }
+
+  .game-modal-btn {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+  }
+
+  .game-hint {
+    top: 18px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    max-width: 92vw;
+  }
+}
+
+/* ============================= */
+/* WIKI MODAL */
+/* ============================= */
+.wiki-modal {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+
+  width: 400px;
+  max-width: 90vw;
+  max-height: 900px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 20px;
+  background: rgba(250, 236, 197, 0.96);
+  border: 4px solid #c79a36;
+  border-radius: 22px;
+  box-shadow:
+    0 6px 0 #7a5a1a,
+    0 14px 28px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  color: #5a3e12;
+  z-index: 10000;
+  font-family: 'Fredoka', sans-serif;
+  box-sizing: border-box;
+}
+
+.wiki-modal-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto 12px auto;
+}
+
+.wiki-modal-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #744013;
+  text-shadow: 1px 1px 0 rgba(255, 248, 220, 0.4);
+}
+
+.wiki-modal-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #5a3e12;
+}
+
+.wiki-modal-btn {
+  margin-top: 10px;
+}
+
+/* ============================= */
+/* INVENTORY MODAL */
+/* ============================= */
+.inventory-modal {
+  min-width: 460px;
+  max-width: 560px;
+  z-index: 10000;
+}
+
+.inventory-modal-title {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.inventory-empty-text {
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/* GRID INVENTARIO */
+/* ============================= */
+
+.inventory-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  justify-items: center;
+}
+
+/* Si solo hay una reliquia, queda centrada */
+.inventory-list .inventory-relic-btn:only-child {
+  grid-column: 1 / -1;
+  max-width: 190px;
+}
+
+/* ============================= */
+/* BOTONES / TARJETAS RELIQUIAS */
+/* ============================= */
+
+.inventory-relic-btn {
+  width: 100%;
+  min-height: 135px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 3px solid #c79a36;
+  border-radius: 18px;
+
+  background: rgba(250, 236, 197, 0.98);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+
+  box-shadow:
+    0 4px 0 #7a5a1a,
+    0 8px 16px rgba(0, 0, 0, 0.22);
+}
+
+.inventory-relic-btn:hover {
+  transform: translateY(-2px);
+  background: #f4d98c;
+}
+
+.inventory-relic-btn:active {
+  transform: translateY(2px);
+
+  box-shadow:
+    0 2px 0 #7a5a1a,
+    0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/* IMAGEN RELIQUIA */
+/* ============================= */
+
+.inventory-relic-img-box {
+  width: 74px;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inventory-relic-img {
+  width: 74px;
+  height: 74px;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  padding: 4px;
+}
+
+/* ============================= */
+/* NOMBRE RELIQUIA */
+/* ============================= */
+
+.inventory-relic-name {
+  text-align: center;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #744013;
+
+  line-height: 1.15;
+
+  text-shadow:
+    1px 1px 0 rgba(255, 248, 220, 0.35);
+}
+
+/* ============================= */
+/* BOTÓN CERRAR */
+/* ============================= */
+
+.inventory-close-btn {
+  width: 100%;
+  margin-top: 22px;
+}
